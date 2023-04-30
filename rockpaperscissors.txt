@@ -1,0 +1,28 @@
+import random
+print('\t*-*-*-**WELCOME TO ROCK PAPER SCISSOR GAME**-*-*-*')
+print(" 'Here are the rules of the game :\n1. first,you need to enter a choice among rock, paper and scissor.\n2. if the computer's choice is rock and yours is paper ,you will win or computer's choice is paper and yours is scissor ,you will win or computer's choice is scissor and yours is rock ,you will win. \n So,lets start the game.'\n ")
+print('please enter your name:')
+name=str(input())
+print(' Please enter the number of odd turns you want in a round.')
+t=int(input())
+h=0
+c=0
+list=['rock','paper','scissor']
+for i in range(t):
+    re=random.choice(list)
+    print('please entre your choice')
+    m=str(input())
+    m.lower()
+    print( 'your input:',m )
+    print('computer input:',re)
+    if(re=='rock' and m=='paper' or re=='paper' and m=='scissor' or re=='scissor' and m=='rock'):
+        h=h+1
+    else:
+        c=c+1
+if (h==c):
+     print('this game is tie')
+elif(h>c):
+     print('YAY!YOU WON THE GAME:',name)
+else:     
+    print('its ok,it is just a game\n"BETTER LUCK NEXT TIME" ')
+     
